@@ -1,0 +1,96 @@
+@keyframes example {
+  /* from {
+    background-color: #9563ee;
+  }
+  to {
+    background-color: #aa86e9;
+  } */
+  0% {
+    -webkit-box-shadow: 0 0 30px #a100ff;
+    box-shadow: 0 0 30px #a100ff;
+  }
+}
+.wah {
+  /* -webkit-animation: glowpulse 3s infinite; */
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background-color: #a100ff;
+}
+.btn {
+  background-color: #a100ff;
+  color: white;
+  border-radius: 30px;
+}
+
+@keyframes screenblink {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  64% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  72% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+
+  91% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.page {
+  animation-name: screenblink;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    margin-top: -1px;
+  }
+  50% {
+    margin-top: -140%;
+  }
+  100% {
+    margin-top: -10%;
+  }
+}
+
+.image {
+  animation-duration: 20s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-name: scroll;
+}

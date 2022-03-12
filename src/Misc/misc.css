@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #34495e;
+} */
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .button:hover {
+  color: rgb(40, 23, 189);
+  background-color: white;
+}
+
+.button {
+  color: white;
+  background-color: #3277b2;
+} */
+
+.but1 {
+  color: "white";
+  display: "block";
+  height: "41px";
+  border-right: "2px solid white";
+  border-left: "2px solid white";
+  border-top: "2px solid white";
+  border-bottom: "2px solid #3277b2";
+  /* borderStyle: "outset"; */
+  /* borderColor: "red"; */
+  border-width: "1px";
+  border-radius: "0px";
+  background-color: "#3277b2";
+  margin-bottom: "2px";
+  /* "&:hover": {
+      backgroundColor: "white";
+      color: "#3277b2";
+    }; */
+}
+
+.but2 {
+  background-color: "yellow";
+  color: "white";
+}
+
+.card {
+  margin: 40px;
+  position: relative;
+  max-width: 250px;
+  max-height: 350px;
+  box-shadow: 0 40px 60px -1px black;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 40px;
+    position: relative;
+    max-width: 150px;
+    max-height: 250px;
+    box-shadow: 0 40px 60px -1px black;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+  /* .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+  }
+
+  .card-desc {
+    display: block;
+    font-size: 0.5rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: orange;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: 0.8s ease;
+  } */
+}
+
+.card-title {
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: #6184a8;
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.card-desc {
+  display: block;
+  font-size: 1.2rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 18px 8%;
+  background-color: white;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: 0.8s ease;
+}
+
+.card-desc::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card-desc::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.card:hover.card-desc {
+  opacity: 1;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
+#popup {
+  display: none;
+  border: 1px black solid;
+  width: 1000px;
+  height: 500px;
+  top: 100px;
+  left: 250px;
+
+  background-color: white;
+  z-index: 10;
+  padding: 2em;
+  position: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+  #popup {
+    background-color: blue;
+    top: 150px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #popup {
+    background-color: orangered;
+    top: 150px;
+  }
+}
+
+#page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+  padding: 2em;
+  position: absolute;
+}
+
+.darken {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#iframe {
+  border: 0;
+  width: 950px;
+  height: 430px;
+}
+
+/* html,
+body,
+#page {
+  height: 100%;
+} */
+
+.skeleton-loader {
+  width: 100%;
+  height: 150px;
+  display: block;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: shine 1s infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0, /* move highlight to right */ 0 0;
+  }
+}
+
+@keyframes loading {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
+}
